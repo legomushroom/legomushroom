@@ -1,0 +1,47 @@
+@-moz-document url-prefix() {
+  div#balloon_holder {
+    left: 200px;
+    top:20px;
+  }
+
+  div.balloon{
+    position: relative;
+    left:-140px;
+    top:0px;
+    -moz-transform:rotate(-4deg);
+    transform:rotate(-4deg);
+  }
+
+  div.balloon2{
+    position: relative;
+    left:160px;
+    top:0px;
+    -moz-transform:rotate(4deg);
+    transform:rotate(4deg);
+  }
+}
+
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+
+  div#balloon_holder {
+    left: 200px;
+    top:20px;
+  }
+
+  div.balloon{
+    position: relative;
+    left:-140px;
+    top:0px;
+    -moz-transform:rotate(-4deg);
+    transform:rotate(-4deg);
+  }
+
+  div.balloon2{
+    position: relative;
+    left:160px;
+    top:0px;
+    -moz-transform:rotate(4deg);
+    transform:rotate(4deg);
+  }
+
+}
