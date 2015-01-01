@@ -56,7 +56,6 @@ waterHeight = 31*gs
     left      4%
     position  absolute
     z-index   2
-  
 .water
   background-color c-sea1
   position relative
@@ -76,7 +75,6 @@ waterHeight = 31*gs
     for i in 0..36
       &--{i}
         left circleSize*i
-        
 .boat
   width     59*gs
   height    30*gs
@@ -189,6 +187,356 @@ waterHeight = 31*gs
         left        -152*PX
         background  linear-gradient(to right,  rgba(189,68,126,1) 0%,rgba(255,88,168,1) 100%)
         transform   rotate(40deg)
+  .chicken-holder
+    position    absolute
+    z-index     2
+    left        155*PX
+    top         124*PX
+    transform   rotate(10deg)
+    // transition: all 2s ease-in-out
+    // animation: chicken 4s linear infinite
+
+.chicken-launcher
+  position  absolute
+  z-index   15
+  cursor    pointer
+  width     10*gs
+  height    4*gs
+  top       186*PX
+  right     136*PX
+  opacity   0
+
+c-chicken = #ffdd00
+c-chicken-orangle = #e76213
+c-chicken-orangle-shadow = #ce4113
+c-chicken-shadow  = #fbb500
+.chicken
+  width             64*PX
+  height            139*PX
+  width             63*PX
+  height            76*PX
+  background-color  c-chicken
+  box-shadow        inset -2px -6px 0 c-chicken-shadow
+  border-radius     50%  50%  50%  50%  / 60%   60%   40%  40%;
+  position          relative
+  &__legs
+    height    115*PX
+    width     7*gs
+    position  absolute
+    top       -1*PX
+    z-index   -1
+    &:before, &:after
+      content       ''
+      position      absolute
+      background    c-chicken-orangle
+      border-radius gs
+      box-shadow    inset 1*PX -1*PX 0 c-chicken-orangle-shadow
+    &:before
+      width   3*PX
+      height  8*PX
+      top     74*PX
+      left    36*PX
+    &:after
+      width   3*PX
+      height  8*PX
+      top     74*PX
+      left    26*PX
+    &__leg
+      position      absolute
+      border-radius gs
+      background    c-chicken-orangle
+      box-shadow    inset 1*PX -1*PX 0 c-chicken-orangle-shadow
+      &:before, &:after
+        content       ''
+        position      absolute
+        box-shadow    inset -1*PX -1*PX 0 c-chicken-orangle-shadow
+        border-radius inherit
+        background    inherit
+      &--left
+        top     82*PX
+        left    26*PX
+        width   5*PX
+        height  3*PX
+        &:before
+          width     5*PX
+          height    13*PX
+          top       -2*PX
+          left      -10*PX
+          transform rotate(72deg)
+        &:after
+          width     5*PX
+          height    11*PX
+          top       -1*PX
+          left      -4*PX
+          transform rotate(26deg)
+      &--right
+        top     82*PX
+        left    31*PX
+        width   5*PX
+        height  3*PX
+        &:before
+          width       5*PX
+          height      13*PX
+          top         -2*PX
+          left        9*PX
+          box-shadow  inset 1*PX -1*PX 0 c-chicken-orangle-shadow
+          transform   rotate(-59deg)
+        &:after
+          width     5*PX
+          height    11*PX
+          top       -1*PX
+          left      3*PX
+          transform rotate(1deg)
+    &__rope
+      position          absolute
+      z-index           1
+      top               78*PX
+      left              23*PX
+      height            2*PX
+      width             18*PX
+      background-color  black
+      background-color  rgba(0,0,0,.7)
+      border-radius     PX
+      &:after
+        content           ''
+        position          absolute
+        top               0
+        left              0
+        height            2*PX
+        width             9*PX
+        background-color  inherit
+        border-radius     inherit
+        transform         rotate(17deg)
+      &--twitter
+        position          absolute
+        z-index           1
+        top               79*PX
+        left              31*PX
+        height            44*PX
+        width             1*PX
+        background-color  black
+        background-color  rgba(0,0,0,.6)
+        border-radius     1*PX
+        transform-origin  50% 0
+        // animation  twit_rope 4s linear infinite;
+  &__hair
+    width     16*PX
+    height    10*PX
+    position  absolute
+    z-index   -1
+    top       -11*PX
+    left      35%
+    &__bit
+      &--1, &--2
+        position absolute
+        background-color #e76213
+        border-radius     gs
+      &--1
+        width             5*PX
+        height            8*PX
+        top               4*PX
+        left              3*PX
+        box-shadow        inset 1*PX -1*PX 0 c-chicken-orangle-shadow
+        transform         rotate(-43deg)
+      &--2
+        width             5*PX
+        height            10*PX
+        top               2*PX
+        left              10*PX
+        box-shadow        inset -1*PX -2*PX 0 c-chicken-orangle-shadow
+        transform         rotate(27deg)
+  &__wing
+    position          absolute
+    z-index           -1
+    background-color  c-chicken
+    circle             9*PX
+    &:before, &:after
+      content     ''
+      position    absolute
+      background  inherit
+      box-shadow  inherit
+      circle      6*PX
+    &--left
+      top         58*PX
+      left        -2*PX
+      box-shadow  inset -2*PX -1*PX 0 c-chicken-shadow
+      // animation left_wing .1s linear infinite;
+      &:before
+        top   -6*PX
+        left  -1*PX
+      &:after
+        top   7*PX
+        left  7*PX
+    &--right
+      top         58*PX
+      left        56*PX
+      box-shadow  inset 2*PX -1*PX 0 c-chicken-shadow
+      // animation  right_wing .1s linear infinite
+      &:before
+        top   -6*PX
+        left  5*PX
+      &:after
+        top   7*PX
+        left  -4*PX
+  &__plumage
+    position          absolute
+    background-color  c-chicken
+    box-shadow        0 1*PX 0 c-chicken-shadow
+    &:before, &:after
+      content     ''
+      position    absolute
+      box-shadow  inherit
+      background  inherit
+    &--1
+      top               48*PX
+      left              4*PX
+      circle            4*PX
+      &:before
+        top             2*PX
+        left            15*PX
+        circle          5*PX
+      &:after
+        top             4*PX
+        left            8*PX
+        circle          6*PX
+    &--2
+      top               55*PX
+      left              30*PX
+      circle            6*PX
+      &:before
+        top             6*PX
+        left            -5*PX
+        circle          5*PX
+      &:after
+        top             7*PX
+        left            -14*PX
+        circle          5*PX
+    &--3        
+      top               47*PX
+      left              43*PX
+      circle            6*PX
+      &:before
+        top             5*PX
+        left            -4*PX
+        circle          5*PX
+      &:after
+        top             7*PX
+        left            6*PX
+        circle          5*PX
+  &__eye
+    position            absolute
+    background-color    white
+    z-index             0
+    box-shadow          2*PX 2*PX 0 #fbb500
+    &:before, &:after
+      content           ''
+      position          absolute
+      background-color  #ffdd00
+      z-index           -1
+    &--left
+      circle            gs
+      top               33*PX
+      left              7*PX
+      &:before
+        top             -4*PX
+        left            -1*PX
+        circle          8*PX
+        width           6*PX
+        height          4*PX
+        box-shadow      0*PX -2*PX 1*PX -1*PX #c99100
+        transform       rotate(-38deg)
+      &:after
+        width                       0
+        height                      0
+        top                         3*PX
+        left                        3*PX
+        border-right                2*PX solid transparent
+        border-top                  2*PX solid black
+        border-left                 2*PX solid black
+        border-bottom               2*PX solid black
+        border-top-left-radius      2*PX
+        border-top-right-radius     2*PX
+        border-bottom-left-radius   2*PX
+        border-bottom-right-radius  2*PX
+        transform                   rotate(-45deg)
+    &--right
+      circle        12*PX
+      top           33*PX
+      left          44*PX
+      &:before
+        top         -4*PX
+        left        4*PX
+        circle      8*PX
+        width       6*PX
+        height      3*PX
+        box-shadow  0 -3*PX 1*PX -1*PX #c99100
+        transform   rotate(38deg)
+      &:after
+        rect                        0
+        top                         3*PX
+        left                        3*PX
+        border-right                2*PX solid transparent
+        border-top                  2*PX solid black
+        border-left                 2*PX solid black
+        border-bottom               2*PX solid black
+        border-top-left-radius      2*PX
+        border-top-right-radius     2*PX
+        border-bottom-left-radius   2*PX
+        border-bottom-right-radius  2*PX
+        transform                   rotate(-45deg)
+  &__nib
+    rect          0
+    border        5*PX solid transparent
+    border-bottom 2*PX solid #d44914
+    position      absolute
+    top           31*PX
+    left          25*PX
+    &:after
+      content     ''
+      position    absolute
+      border      5*PX solid transparent
+      left        -5*PX
+      top         2*PX
+      rect        0
+      border-top  7*PX solid #d44914
+    &--shadow
+      rect          0
+      border-bottom 2*PX solid #fbb500
+      top           33*PX
+      left          26*PX
+      &:after
+        left        -5*PX
+        top         2*PX
+        border-top  7*PX solid #fbb500
+  &__twit
+    position          absolute
+    top               126*PX
+    left              -49*PX
+    background-color  white
+    border-radius     6*PX
+    z-index           0
+    padding           4px
+    padding-bottom    0
+    transform         rotate(15deg)
+    // animation: twit 4s linear infinite
+    &:before, &:after
+      content           ''
+      position          absolute
+      top               -1*gs
+    &:before
+      circle            6*PX
+      z-index           -1
+      border            5*PX solid white
+      border-radius     2*gs
+      left              42%
+    &:after
+      width             2*PX
+      height            5*PX
+      background-color  black
+      left              46%
+      transform         rotate(-15deg)
+
+
 
 
 
