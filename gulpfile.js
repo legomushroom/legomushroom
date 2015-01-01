@@ -48,7 +48,7 @@ gulp.task('build', function(){
 });
 
 gulp.task('stylus', function(){
-  return gulp.src(devFolder + 'css/main.styl')
+  return gulp.src(devFolder + 'css/main2.styl')
           .pipe(plumber())
           .pipe(stylus())
           .pipe(autoprefixer('last 4 version'))

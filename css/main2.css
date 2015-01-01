@@ -1,0 +1,164 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 16px;
+}
+body {
+  background: #87e0fd; /* Old browsers */
+  background: -webkit-radial-gradient(center, ellipse, #87e0fd 0%, #53cbf1 40%, #05abe0 100%); /* Old browsers */
+  background: radial-gradient(ellipse at center, #87e0fd 0%, #53cbf1 40%, #05abe0 100%); /* W3C */
+}
+.water-holder {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 19.375rem;
+  outline: 1px solid #ff1493;
+}
+.water-holder .water {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  top: -3.125rem;
+}
+.water-holder .water--middle {
+  top: 0;
+}
+.water-holder .water--front {
+  top: 3.125rem;
+}
+.water {
+  background-color: #01a0db;
+}
+.water--middle {
+  background-color: #0ebeff;
+}
+.water--front {
+  background-color: #48cdfd;
+}
+.water__top {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: inherit;
+  position: absolute;
+  top: -2.5rem;
+  left: 50%;
+}
+.water__top--0 {
+  left: 0rem;
+}
+.water__top--1 {
+  left: 5rem;
+}
+.water__top--2 {
+  left: 10rem;
+}
+.water__top--3 {
+  left: 15rem;
+}
+.water__top--4 {
+  left: 20rem;
+}
+.water__top--5 {
+  left: 25rem;
+}
+.water__top--6 {
+  left: 30rem;
+}
+.water__top--7 {
+  left: 35rem;
+}
+.water__top--8 {
+  left: 40rem;
+}
+.water__top--9 {
+  left: 45rem;
+}
+.water__top--10 {
+  left: 50rem;
+}
+.water__top--11 {
+  left: 55rem;
+}
+.water__top--12 {
+  left: 60rem;
+}
+.water__top--13 {
+  left: 65rem;
+}
+.water__top--14 {
+  left: 70rem;
+}
+.water__top--15 {
+  left: 75rem;
+}
+.water__top--16 {
+  left: 80rem;
+}
+.water__top--17 {
+  left: 85rem;
+}
+.water__top--18 {
+  left: 90rem;
+}
+.water__top--19 {
+  left: 95rem;
+}
+.water__top--20 {
+  left: 100rem;
+}
+.water__top--21 {
+  left: 105rem;
+}
+.water__top--22 {
+  left: 110rem;
+}
+.water__top--23 {
+  left: 115rem;
+}
+.water__top--24 {
+  left: 120rem;
+}
+.water__top--25 {
+  left: 125rem;
+}
+.water__top--26 {
+  left: 130rem;
+}
+.water__top--27 {
+  left: 135rem;
+}
+.water__top--28 {
+  left: 140rem;
+}
+.water__top--29 {
+  left: 145rem;
+}
+.water__top--30 {
+  left: 150rem;
+}
+.water__top--31 {
+  left: 155rem;
+}
+.water__top--32 {
+  left: 160rem;
+}
+.water__top--33 {
+  left: 165rem;
+}
+.water__top--34 {
+  left: 170rem;
+}
+.water__top--35 {
+  left: 175rem;
+}
+.water__top--36 {
+  left: 180rem;
+}
