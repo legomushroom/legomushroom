@@ -29,29 +29,38 @@ body, html
   
 
 body
-  background: rgb(135,224,253); /* Old browsers */
-  background: radial-gradient(ellipse at center,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%); /* W3C */
+  background: rgb(135,224,253)
+  background: radial-gradient(ellipse at center,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%)
 
-
+waterHeight = 31*gs
 .water-holder
   position absolute
   bottom 0
   width 100%
-  height 31*gs
-  hl()
+  height waterHeight
   waterShift = 5*gs
   .water
     position absolute
     nw -10%
     rect 120%
     top -(waterShift)
+    z-index 0
     &--middle
       top 0
+      z-index 1
     &--front
       top waterShift
+      z-index 3
+  .boat
+    bottom    waterHeight - waterShift
+    left      4%
+    position  absolute
+    z-index   2
   
 .water
   background-color c-sea1
+  position relative
+  z-index 0
   &--middle
     background-color c-sea2
   &--front
@@ -62,9 +71,130 @@ body
     background-color inherit
     position absolute
     top -(circleSize/2)
-    left 50%
+    box-shadow 0 -9*PX gs rgba(0,0,0,.02)
+    z-index -1
     for i in 0..36
       &--{i}
         left circleSize*i
+        
+.boat
+  width     59*gs
+  height    30*gs
+  &__part
+    position    absolute
+    box-shadow  0 16*PX 10*PX -17*PX rgba(0,0,0,0.5)
+    overflow    hidden
+    height      31*gs
+    &:after
+      content     ''
+      position    absolute
+      background  rgb(189,68,126)
+      box-shadow  -1*PX -1*PX 10*PX -2*PX rgba(0,0,0,0.5)
+    &--base
+      z-index  4
+      bottom   0
+      left     138*PX
+      width    288*PX
+      height   76*PX
+      &:after
+        width       40*gs
+        height      15*gs
+        top         54*PX
+        left        -76*PX
+        background  rgb(255,88,168)
+        background  linear-gradient(to bottom,  rgba(255,88,168,1) 0%,rgba(188,39,109,1) 100%)
+        transform   skew(38deg, -4deg) rotate(-12deg)
+    &--right-base
+      z-index   5
+      bottom    73*PX
+      left      348*PX
+      width     234*PX
+      height    106*PX
+      transform rotate(-45deg) skewY(-4deg)
+      &:after
+        content ''
+        width       30*gs
+        height      15*gs
+        top         41*PX
+        left        -76*PX
+        background  linear-gradient(to right,  rgba(189,68,126,1) 0%,rgba(255,88,168,1) 100%)
+        transform   rotate(24deg)
+    &--left-base
+      z-index   3
+      bottom    14*PX
+      left      34*PX
+      width     234*PX
+      height    306*PX
+      transform rotate(-19deg) skewX(18deg)
+      &:after
+        width       32*gs
+        height      30*gs
+        top         25*gs - 2*PX
+        left        -5*gs  - 2*PX
+        background  linear-gradient(to right,  rgba(189,68,126,1) 0%,rgba(255,88,168,1) 100%)
+        box-shadow  30*PX -1*PX 27*PX -2*PX rgba(0, 0, 0, 0.50)
+        transform   rotate(45deg) skewX(41deg)
+    &--middle-left
+      z-index   2
+      bottom    56*PX
+      left      86*PX
+      width     22*gs
+      height    206*PX
+      &:after
+        width       16*gs
+        height      18*gs
+        top         34*PX
+        left        178*PX
+        background  linear-gradient(to right,  rgba(189,68,126,1) 0%,rgba(255,88,168,1) 100%) /* W3C */
+        box-shadow  -12*PX 106*PX 54px -2px rgba(0, 0, 0, 0.50)
+        transform   rotate(32deg)
+    &--middle-right
+      z-index     2
+      bottom      74*PX
+      left        306*PX
+      width       18*gs
+      height      183*PX
+      box-shadow  -19*PX 16*PX 10*PX -17*PX rgba(0,0,0,0.5)
+      &:after
+        width       16*gs
+        height      18*gs
+        top         51*PX
+        left        -98*PX
+        background  linear-gradient(to right,  rgba(189,68,126,1) 0%,rgba(255,88,168,1) 100%)
+        transform   rotate(-35deg)
+    &--back-right
+      z-index   0
+      bottom    68*PX
+      left      30*gs
+      width     24*gs
+      height    206*PX
+      transform rotate(-42deg)
+      &:after
+        width     30*gs
+        height    16*gs
+        top       102*PX
+        left      -6*gs
+        transform rotate(40deg)
+    &--back-left
+      z-index   1
+      bottom    65*PX
+      left      48*PX
+      width     23*gs
+      height    206*PX
+      transform rotate(-35deg)
+      &:after
+        width       42*gs
+        height      30*gs
+        top         93*PX
+        left        -152*PX
+        background  linear-gradient(to right,  rgba(189,68,126,1) 0%,rgba(255,88,168,1) 100%)
+        transform   rotate(40deg)
+
+
+
+
+
+
+
       
   
