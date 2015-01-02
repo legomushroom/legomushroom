@@ -810,3 +810,118 @@ body {
   -ms-transform: rotate(-15deg);
   transform: rotate(-15deg);
 }
+.legomushroom-holder {
+  position: absolute;
+  left: 22.125rem;
+  z-index: 3;
+  top: -1.25rem;
+}
+.legomushroom {
+  position: absolute;
+  height: 15.625rem;
+  width: 8.125rem;
+  border-top-left-radius: 4.125rem;
+  border-top-right-radius: 4.125rem;
+  border-bottom-right-radius: 4.125rem;
+  background: #07c3fc;
+  background: -webkit-radial-gradient(center, ellipse, #07c3fc 0%, #05abe0 100%);
+  background: radial-gradient(ellipse at center, #07c3fc 0%, #05abe0 100%);
+  box-shadow: 0 0.5rem 0.625rem rgba(0,0,0,0.4);
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+}
+.legomushroom__hat {
+  position: absolute;
+  top: -46px;
+  left: 46px;
+  width: 58px;
+  height: 76px;
+  overflow: hidden;
+  z-index: 1000;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.legomushroom__hat__base {
+  position: absolute;
+  z-index: 1;
+  top: 6px;
+  left: 18px;
+  width: 32px;
+  height: 42px;
+  background-color: #002433;
+  -webkit-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+}
+.legomushroom__hat__base:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: -1px;
+  width: 32px;
+  height: 42px;
+  background-color: #002433;
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+.legomushroom__hat__base-line {
+  z-index: 3;
+  position: absolute;
+  top: -14px;
+  left: -15px;
+  border: 6px solid #002433;
+  width: 80px;
+  height: 54px;
+  border-radius: 40px/25px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+  -webkit-transform: rotate(12deg);
+  -ms-transform: rotate(12deg);
+  transform: rotate(12deg);
+}
+.legomushroom__hat__stripe {
+  position: absolute;
+  z-index: 2;
+  top: 7px;
+  left: 17px;
+  width: 33px;
+  height: 42px;
+  overflow: hidden;
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+.legomushroom__hat__stripe:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: -12px;
+  left: -32px;
+  width: 80px;
+  height: 40px;
+  border-radius: 40px/20px;
+  border: 5px solid #043147;
+}
+.legomushroom__hat__stripe__square {
+  z-index: 3;
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  top: 31px;
+  left: 8px;
+  background-color: #0d4759;
+}
+.legomushroom__hat__top {
+  position: absolute;
+  top: 4px;
+  left: 21px;
+  width: 32px;
+  height: 4px;
+  border-radius: 16px/2px;
+  background-color: #115f80;
+  -webkit-transform: rotate(9deg);
+  -ms-transform: rotate(9deg);
+  transform: rotate(9deg);
+}

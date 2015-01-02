@@ -27,8 +27,8 @@ body, html
   overflow hidden
   font-size 16px 
 body
-  background: rgb(135,224,253)
-  background: radial-gradient(ellipse at center,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%)
+  background rgb(135,224,253)
+  background radial-gradient(ellipse at center,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%)
 waterHeight = 20*gs
 .water-holder
   position absolute
@@ -543,6 +543,103 @@ c-chicken-shadow  = #fbb500
       background-color  black
       left              46%
       transform         rotate(-15deg)
+
+.legomushroom-holder
+  position absolute
+  left 354*PX
+  z-index 3
+  top  -2*gs
+
+.legomushroom
+  position absolute
+  height 250*PX
+  width 130*PX
+  border-top-left-radius 66*PX
+  border-top-right-radius 66*PX 
+  border-bottom-right-radius 66*PX
+  background rgb(7,195,252)
+  background radial-gradient(ellipse at center,  rgba(7,195,252,1) 0%,rgba(5,171,224,1) 100%)
+
+  box-shadow 0 8*PX 10*PX rgba(0,0,0,.4)
+  transform rotate(0)
+  // animation:lego_body 5s ease-in infinite;
+  &__hat
+    position:absolute
+    top:-46px
+    left:46px
+    width:58px
+    height:76px
+    overflow:hidden
+    z-index:1000
+    transform:rotate(0deg);
+    // animation:lego_body_hat 5s ease-in infinite;
+    &__base
+      position absolute
+      z-index 1
+      top 6px
+      left 18px
+      width 32px
+      height 42px
+      background-color #002433
+      transform rotate(8deg)
+      &:after
+        content ''
+        position absolute
+        top 0px
+        left -1px
+        width 32px
+        height 42px
+        background-color #002433
+        transform rotate(2deg)
+    &__base-line
+      z-index:3
+      position:absolute
+      top:-14px
+      left:-15px
+      border:6px solid #002433
+      width:80px
+      height:54px
+      border-radius: 40px / 25px
+      box-shadow:0 2px 3px rgba(0,0,0,.3);
+      transform:rotate(12deg);
+    &__stripe
+      position:absolute
+      z-index:2
+      top:7px
+      left:17px
+      width:33px
+      height:42px
+      overflow:hidden
+      transform:rotate(10deg);
+      &:after
+        content:""
+        position:absolute
+        z-index:2
+        top:-12px
+        left:-32px
+        width:80px
+        height:40px
+        border-radius: 40px / 20px
+        border:5px solid #043147
+      &__square
+        z-index:3
+        width:7px
+        height:7px
+        position:absolute
+        top:31px
+        left:8px
+        background-color:#0d4759
+    &__top
+      position:absolute
+      top:4px
+      left:21px
+      width:32px
+      height:4px
+      border-radius: 16px / 2px
+      background-color: #115f80
+      transform:rotate(9deg);
+
+
 
 
 
