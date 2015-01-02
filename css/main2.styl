@@ -26,13 +26,10 @@ body, html
   padding 0
   overflow hidden
   font-size 16px 
-  
-
 body
   background: rgb(135,224,253)
   background: radial-gradient(ellipse at center,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%)
-
-waterHeight = 31*gs
+waterHeight = 20*gs
 .water-holder
   position absolute
   bottom 0
@@ -193,18 +190,29 @@ waterHeight = 31*gs
     left        155*PX
     top         124*PX
     transform   rotate(10deg)
+    transition  all 2s ease-out
     // transition: all 2s ease-in-out
     // animation: chicken 4s linear infinite
 
 .chicken-launcher
-  position  absolute
-  z-index   15
-  cursor    pointer
-  width     10*gs
-  height    4*gs
-  top       186*PX
-  right     136*PX
-  opacity   0
+  position    absolute
+  z-index     15
+  cursor      pointer
+  rect        8*gs
+  top         11*gs
+  left        15.5*gs
+  transition  all 2s ease-out
+  opacity     0
+  &:checked, &:checked ~ .chicken-holder
+    top         -11*gs
+    z-index     3
+    transform   rotate(0)
+  &:checked
+    z-index 4
+  & ~ .chicken-holder .chicken__wing--left
+    // animation   left_wing .1s linear infinite
+  & ~ .chicken-holder .chicken__wing--left
+    // animation: right_wing .1s linear infinite;
 
 c-chicken = #ffdd00
 c-chicken-orangle = #e76213

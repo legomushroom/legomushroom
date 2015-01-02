@@ -16,7 +16,7 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 19.375rem;
+  height: 12.5rem;
 }
 .water-holder .water {
   position: absolute;
@@ -36,7 +36,7 @@ body {
   z-index: 3;
 }
 .water-holder .boat {
-  bottom: 16.25rem;
+  bottom: 9.375rem;
   left: 4%;
   position: absolute;
   z-index: 2;
@@ -338,16 +338,31 @@ body {
   -webkit-transform: rotate(10deg);
   -ms-transform: rotate(10deg);
   transform: rotate(10deg);
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
 }
 .chicken-launcher {
   position: absolute;
   z-index: 15;
   cursor: pointer;
-  width: 6.25rem;
-  height: 2.5rem;
-  top: 11.625rem;
-  right: 8.5rem;
+  width: 5rem;
+  height: 5rem;
+  top: 6.875rem;
+  left: 9.6875rem;
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
   opacity: 0;
+}
+.chicken-launcher:checked,
+.chicken-launcher:checked ~ .chicken-holder {
+  top: -6.875rem;
+  z-index: 3;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+}
+.chicken-launcher:checked {
+  z-index: 4;
 }
 .chicken {
   width: 4rem;
