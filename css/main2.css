@@ -833,23 +833,20 @@ body {
 }
 .legomushroom__hat {
   position: absolute;
-  top: -46px;
-  left: 46px;
-  width: 58px;
-  height: 76px;
+  top: -2.875rem;
+  left: 2.875rem;
+  width: 3.625rem;
+  height: 4.75rem;
   overflow: hidden;
   z-index: 1000;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
 }
 .legomushroom__hat__base {
   position: absolute;
   z-index: 1;
-  top: 6px;
-  left: 18px;
-  width: 32px;
-  height: 42px;
+  top: 0.375rem;
+  left: 1.125rem;
+  width: 2rem;
+  height: 2.625rem;
   background-color: #002433;
   -webkit-transform: rotate(8deg);
   -ms-transform: rotate(8deg);
@@ -858,10 +855,10 @@ body {
 .legomushroom__hat__base:after {
   content: '';
   position: absolute;
-  top: 0px;
-  left: -1px;
-  width: 32px;
-  height: 42px;
+  top: 0rem;
+  left: -0.0625rem;
+  width: 2rem;
+  height: 2.625rem;
   background-color: #002433;
   -webkit-transform: rotate(2deg);
   -ms-transform: rotate(2deg);
@@ -870,13 +867,13 @@ body {
 .legomushroom__hat__base-line {
   z-index: 3;
   position: absolute;
-  top: -14px;
-  left: -15px;
-  border: 6px solid #002433;
-  width: 80px;
-  height: 54px;
-  border-radius: 40px/25px;
-  box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+  top: -0.875rem;
+  left: -0.9375rem;
+  border: 0.375rem solid #002433;
+  width: 5rem;
+  height: 3.375rem;
+  border-radius: 2.5rem/1.5625rem;
+  box-shadow: 0 0.125rem 0.1875rem rgba(0,0,0,0.3);
   -webkit-transform: rotate(12deg);
   -ms-transform: rotate(12deg);
   transform: rotate(12deg);
@@ -884,44 +881,260 @@ body {
 .legomushroom__hat__stripe {
   position: absolute;
   z-index: 2;
-  top: 7px;
-  left: 17px;
-  width: 33px;
-  height: 42px;
+  top: 0.4375rem;
+  left: 1.0625rem;
+  width: 2.0625rem;
+  height: 2.625rem;
   overflow: hidden;
   -webkit-transform: rotate(10deg);
   -ms-transform: rotate(10deg);
   transform: rotate(10deg);
 }
 .legomushroom__hat__stripe:after {
-  content: "";
+  content: '';
   position: absolute;
   z-index: 2;
-  top: -12px;
-  left: -32px;
-  width: 80px;
-  height: 40px;
-  border-radius: 40px/20px;
-  border: 5px solid #043147;
+  top: -0.75rem;
+  left: -2rem;
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 2.5rem/1.25rem;
+  border: 0.3125rem solid #043147;
 }
 .legomushroom__hat__stripe__square {
   z-index: 3;
-  width: 7px;
-  height: 7px;
+  width: 0.4375rem;
+  height: 0.4375rem;
   position: absolute;
-  top: 31px;
-  left: 8px;
+  top: 1.9375rem;
+  left: 0.5rem;
   background-color: #0d4759;
 }
 .legomushroom__hat__top {
   position: absolute;
-  top: 4px;
-  left: 21px;
-  width: 32px;
-  height: 4px;
-  border-radius: 16px/2px;
+  top: 0.25rem;
+  left: 1.3125rem;
+  width: 2rem;
+  height: 0.25rem;
+  border-radius: 1rem/0.125rem;
   background-color: #115f80;
   -webkit-transform: rotate(9deg);
   -ms-transform: rotate(9deg);
   transform: rotate(9deg);
+}
+.legomushroom__eye {
+  width: 5.0625rem;
+  height: 5.0625rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 1.4375rem;
+  left: 1.375rem;
+  background-color: #ff3e28;
+  background: -webkit-radial-gradient(center, ellipse, #000 0%, #ff3e28 71%);
+  background: radial-gradient(ellipse at center, #000 0%, #ff3e28 71%);
+  box-shadow: inset 0 0 1.5rem rgba(255,255,0,0.3), inset 0.375rem 0 0.25rem rgba(255,255,0,0.3);
+  border: 0.1875rem solid #000;
+}
+.legomushroom__eye:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0.25rem;
+  top: 0.1875rem;
+  background-color: #000;
+  height: 4.75rem;
+  width: 5.0625rem;
+  border-radius: 2.5625rem/2.375rem;
+}
+.legomushroom__eye__fur {
+  position: absolute;
+  left: 4.875rem;
+  top: 1.875rem;
+  z-index: -1;
+}
+.legomushroom__eye__fur__fur-bit {
+  background-color: #000;
+  width: 0.5rem;
+  height: 1.5625rem;
+  border-radius: 0.25rem/0.75rem;
+  position: absolute;
+  left: 1.25rem;
+}
+.legomushroom__eye__fur__fur-bit--1 {
+  top: 0;
+  left: 0;
+  box-shadow: 0.1875rem -0.25rem 0.375rem rgba(0,0,0,0.3);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.legomushroom__eye__fur__fur-bit--2 {
+  left: 0.0625rem;
+  top: 0.125rem;
+  box-shadow: 0.1875rem -0.25rem 0.375rem rgba(0,0,0,0.3);
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+.legomushroom__eye__holder {
+  position: absolute;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border-radius: 50%;
+  top: 2.1875rem;
+  left: 1.6875rem;
+  z-index: 1;
+}
+.legomushroom__eye__holder__radial {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  top: 0.0625rem;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0,0,0,0) 0%, rgba(0,0,0,0.62) 42%, rgba(0,0,0,0.65) 44%);
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.62) 42%, rgba(0,0,0,0.65) 44%);
+  -webkit-transform: rotate(50deg);
+  -ms-transform: rotate(50deg);
+  transform: rotate(50deg);
+}
+.legomushroom__eye__holder__cloud {
+  background: #c80000;
+  width: 0.3125rem;
+  height: 0.3125rem;
+  border-radius: 50%;
+  z-index: 0;
+  margin: 0.6875rem 0.5625rem 0 0;
+  opacity: 0.35;
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+.legomushroom__eye__holder__cloud:before,
+.legomushroom__eye__holder__cloud:after {
+  content: '';
+  position: absolute;
+  background: inherit;
+}
+.legomushroom__eye__holder__cloud:before {
+  width: 0.1875rem;
+  height: 0.1875rem;
+  border-radius: 50%;
+  margin: -0.1875rem 0 0 0.1875rem;
+  box-shadow: 0.0625rem 0.0625rem 0 #c80000, 0.1875rem 0.0625rem 0 #c80000, 0.1875rem 0.1875rem 0 #c80000, -0.375rem 0.3125rem 0 #c80000, 0.1875rem -0.0625rem 0 #c80000;
+}
+.legomushroom__eye__holder__cloud:after {
+  width: 0.3125rem;
+  height: 0.3125rem;
+  border-radius: 50%;
+  margin: 0 0 0 0.1875rem;
+}
+.legomushroom__eye__pupil {
+  height: 2.5rem;
+  width: 2.125rem;
+  border: 2px solid #a7370e;
+  background-color: #000;
+  margin: 20% 0 0 28%;
+  border-radius: 1.1875rem/1.375rem;
+  position: absolute;
+  box-shadow: 0 0 5px rgba(255,255,0,0.26);
+  -webkit-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
+}
+.legomushroom__eye__pupil:before,
+.legomushroom__eye__pupil:after {
+  content: '';
+  position: absolute;
+}
+.legomushroom__eye__pupil:after {
+  background-color: rgba(255,255,255,0.6);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  z-index: 1;
+  top: 14px;
+  left: 6px;
+}
+.legomushroom__eye__pupil:before {
+  background-color: rgba(255,255,255,0.6);
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  z-index: 2;
+  top: 16px;
+  left: 13px;
+}
+.legomushroom__eye__glimpse {
+  position: absolute;
+  z-index: 1;
+}
+.legomushroom__eye__glimpse:before,
+.legomushroom__eye__glimpse:after {
+  content: '';
+  position: absolute;
+}
+.legomushroom__eye__glimpse--1 {
+  margin: 9px 0 0 34%;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 63%, #fff 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 63%, #fff 100%);
+  opacity: 0.21;
+  -webkit-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+.legomushroom__eye__glimpse--1:after {
+  left: -15px;
+  top: -3px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(top, #fff 0%, rgba(255,255,255,0) 44%);
+  background: linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0) 44%);
+  opacity: 0.7;
+  -webkit-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+.legomushroom__eye__glimpse--1:before {
+  z-index: 1;
+  left: -33px;
+  top: 36px;
+  width: 32px;
+  height: 23px;
+  border-radius: 16px/12px;
+  background: -webkit-radial-gradient(center, ellipse, #f80 0%, rgba(255,255,255,0) 56%);
+  background: radial-gradient(ellipse at center, #f80 0%, rgba(255,255,255,0) 56%);
+  -webkit-transform: rotate(68deg);
+  -ms-transform: rotate(68deg);
+  transform: rotate(68deg);
+}
+.legomushroom__eye__glimpse--2 {
+  width: 10px;
+  height: 40px;
+  border-radius: 5px/20px;
+  top: 26px;
+  left: 66px;
+  background-color: rgba(232,59,12,0.5);
+  box-shadow: 0 0 20px rgba(232,59,12,0.8);
+  -webkit-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+.legomushroom__eye__glimpse--2:after {
+  width: 2px;
+  height: 15px;
+  border-radius: 1px/7px;
+  z-index: 1;
+  top: 10px;
+  left: 8px;
+  background-color: rgba(255,255,0,0.6);
+  box-shadow: 0 0 30px rgba(255,255,0,0.6);
+  -webkit-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
 }
