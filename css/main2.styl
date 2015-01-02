@@ -717,23 +717,23 @@ c-chicken-shadow  = #fbb500
       margin            20% 0 0 28%
       border-radius     19*PX / 22*PX
       position          absolute
-      box-shadow        0 0 5px rgba(255,255,0,.26)
+      box-shadow        0 0 5*PX rgba(255,255,0,.26)
       transform         rotate(4deg)
       &:before, &:after
         content   ''
         position  absolute
       &:after
         background-color  rgba(255,255,255,.6)
-        circle            4px
+        circle            4*PX
         z-index           1
-        top               14px
-        left              6px
+        top               14*PX
+        left              6*PX
       &:before
         background-color  rgba(255,255,255,.6);
-        circle            2px
+        circle            2*PX
         z-index           2
-        top               16px
-        left              13px
+        top               16*PX
+        left              13*PX
     &__glimpse
       position    absolute
       z-index     1
@@ -741,46 +741,95 @@ c-chicken-shadow  = #fbb500
         content   ''
         position  absolute
       &--1
-        margin            9px 0 0 34%
-        circle            25px
+        margin            9*PX 0 0 34%
+        circle            25*PX
         background        linear-gradient(to bottom,  rgba(255,255,255,0) 63%,rgba(255,255,255,1) 100%) /* W3C */
         opacity           .21
         transform         rotate(-20deg)
         &:after
-          left            -15px
-          top             -3px
-          circle          45px
+          left            -15*PX
+          top             -3*PX
+          circle          45*PX
           background      linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 44%) /* W3C */
           opacity         .7
           transform       rotate(-10deg)
         &:before
           z-index         1
-          left            -33px
-          top             36px
-          width           32px
-          height          23px
-          border-radius   16px / 12px
+          left            -33*PX
+          top             36*PX
+          width           32*PX
+          height          23*PX
+          border-radius   16*PX / 12*PX
           background      radial-gradient(ellipse at center,  rgba(255,136,0,1) 0%,rgba(255,255,255,0) 56%) /* W3C */
           transform       rotate(68deg)
       &--2
-        width             10px
-        height            40px
-        border-radius     5px / 20px
-        top               26px
-        left              66px
+        width             10*PX
+        height            40*PX
+        border-radius     5*PX / 20*PX
+        top               26*PX
+        left              66*PX
         background-color  rgba(232,59,12,.5)
-        box-shadow        0 0 20px rgba(232,59,12,.8)
+        box-shadow        0 0 20*PX rgba(232,59,12,.8)
         transform         rotate(20deg)
         &:after
-          width             2px
-          height            15px
-          border-radius     1px / 7px
+          width             2*PX
+          height            15*PX
+          border-radius     1*PX / 7*PX
           z-index           1
-          top               10px
-          left              8px
+          top               10*PX
+          left              8*PX
           background-color  rgba(255,255,0,.6)
-          box-shadow        0 0 30px rgba(255,255,0,.6)
+          box-shadow        0 0 30*PX rgba(255,255,0,.6)
           transform         rotate(-8deg)
-      
+  &__smile
+    position    absolute
+    top         104*PX
+    left        0*PX
+    width       130*PX
+    height      32*PX
+    &__chicks
+      position          absolute
+      top               2*PX
+      left              -11*PX
+      width             24*PX
+      height            14*PX
+      border-radius     12*PX / 7*PX
+      background-color  #00aa00
+      transform         rotate(29deg)
+      &:after
+        content           ''
+        position          absolute
+        z-index           1
+        top               -60*PX
+        left              112*PX
+        width             24*PX
+        height            14*PX
+        border-radius     12*PX / 7*PX
+        background-color  #00aa00
+        transform         rotate(-58deg)
+  &__mouth
+    position          absolute
+    nw                0
+    overflow          hidden
+    width             130*PX
+    height            36*PX
+    border-radius     133*PX
+    &__inner
+      width           200*PX
+      height          130*PX
+      border-radius   100*PX / 65*PX
+      border          1*PX solid rgba(0,0,0,.4)
+      position        absolute
+      z-index         1
+      top             -108*PX
+      left            -35*PX
+    &__base
+      position        absolute
+      top             -300*PX
+      left            -100*PX
+      border          16*PX solid #00aa00
+      circle          300*PX
+  
+
       
   
